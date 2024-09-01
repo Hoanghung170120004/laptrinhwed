@@ -19,7 +19,7 @@
             color: black;
         }
 
-        form input[type="text"],form input[type="number"] {
+        form input[type="text"], form input[type="number"] {
             width: 100%;
             padding: 10px;
             margin-bottom: 20px;
@@ -49,32 +49,26 @@
         }
 
     </style>
-
 </head>
 <body>
-<form id="myForm" action="Post.php" method="post" onsubmit="return validateForm()">
-    <label>Tác giả</label>
-    <input id="tentg" type="text" name="tentg">
+    <form id="myForm" action="Post.php" method="post" onsubmit="return validateForm()" novalidate>
+        <label>Tác giả</label>
+        <input id="tentg" type="text" name="tentg">
+        <br>
+        <label>Tên sách</label>
+        <input id="tensach" type="text" name="tensach">
+        <br>
+        <label>Nhà xuất bản</label>
+        <input id="nhaxb" type="text" name="nhaxb">
+        <br>
+        <label>Năm xuất bản</label>
+        <input id="namxb" type="number" name="namxb">
+        <br>
+        <p id="error-message"></p>
+        <button type="submit" name="submit">Submit</button>
+    </form>
 
-    <br>
-    <label>Tên sách</label>
-    <input id="tensach" type="text" name="tensach">
-
-    <br>
-    <label>Nhà xuất bản</label>
-    <input id="nhaxb" type="text" name="nhaxb">
-
-    <br>
-    <label>Năm xuất bản</label>
-    <input id="namxb" type="number" name="namxb">
-    <br>
-
-    <p id="error-message"></p>
-    <button type="submit" name="submit">Submit</button>
-
-</form>
-
-<!-- <form id="myForm" action="Post.php" method="get" onsubmit="return validateForm()">
+    <!-- <form id="myForm" action="Post.php" method="get" onsubmit="return validateForm()">
     <label>Tác giả</label>
     <input id="tentg" type="text" name="tentg">
     <br>
@@ -91,7 +85,6 @@
     <button type="submit" "name="submit">Submit</button>
 
 </form> -->
-    <script src="B3B1.js"></script>
-
+    <script src="B1.js"></script>
 </body>
 </html>
