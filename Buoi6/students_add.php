@@ -1,6 +1,6 @@
 <?php
  
-require '.Buoi6/libs/students.php';
+require 'libs/students.php';
  
 // Nếu người dùng submit form
 if (!empty($_POST['add_student']))

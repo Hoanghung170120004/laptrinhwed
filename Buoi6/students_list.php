@@ -1,5 +1,5 @@
 <?php
-require '.Buoi6/libs/students.php';
+require'libs/students.php';
 $students = get_all_students();
 disconnect_db();
 ?>

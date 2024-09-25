@@ -1,6 +1,6 @@
 <?php
  
-require '.Buoi6/libs/students.php';
+require 'libs/students.php';
  
 // Lấy thông tin hiển thị lên để người dùng sửa
 $id = isset($_GET['id']) ? (int)$_GET['id'] : '';
