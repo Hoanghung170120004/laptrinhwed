@@ -1,7 +1,7 @@
 
 <?php
 // Tạo kết nối
-$conn = mysqli_connect("sql110.infinityfree.com","if0_37103164","Hoanghung2004","if0_37103164_b5_mydb");
+$conn = mysqli_connect("sql204.infinityfree.com","if0_37502648","Hoanghung20004","if0_37502648_b51_mysql");
 
 // Kiểm tra kết nối
 if (!$conn) {

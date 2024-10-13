@@ -10,7 +10,7 @@ function connect_db()
      
     // Nếu chưa kết nối thì thực hiện kết nối
     try {
-        $conn = new PDO("mysql:host=sql110.infinityfree.com;dbname=if0_37103164_qlsinhvien", "if0_37103164", "Hoanghung2004");
+        $conn = new PDO("sql204.infinityfree.com;dbname=if0_37502648_qlsinhvien", "if0_37502648", "Hoanghung20004");
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         echo "Connected successfully";
       } catch(PDOException $e) {

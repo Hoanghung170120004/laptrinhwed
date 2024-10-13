@@ -4,7 +4,7 @@ function connect_db()
 {
 	global $conn;
   try {
-    $conn = new PDO("sql204.infinityfree.com;dbname=if0_37502648_employee_db", "if0_37502648", "Hoanghung20004");
+    $conn = new PDO("mysql:host=sql204.infinityfree.com;dbname=if0_37502648_employee_db", 'if0_37502648', 'Hoanghung20004');
 	  // set the PDO error mode to exception
 	  $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	  //echo "Kết nối thành công";
@@ -65,8 +65,7 @@ function get_employees($employee_id)
     // var_dump($result);
     
 }
-
-
+ 
 // Hàm thêm nhân viên
 function add_employee($employee_firstname, $employee_lastname,$employee_dep, $employee_role)
 {
@@ -285,47 +284,5 @@ function get_departmentid($department_name)
     
     
 }
-
-function add_role($role_name)
-{
-    global $conn;
-    connect_db();
-     
-    try {
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);   
-        
-        // Prepare the SQL query to insert the role
-        $sql = "INSERT INTO employeeroles (role_name) VALUES (:role_name)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':role_name', $role_name);
-        
-        // Execute the query
-        $stmt->execute();
-        echo "Thêm chức vụ thành công";
-    } catch (PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
-    }
-}
-
-function add_department($department_name)
-{
-    global $conn;
-    connect_db();
-     
-    try {
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        
-        // Câu lệnh SQL thêm phòng ban
-        $sql = "INSERT INTO departments (department_name) VALUES (:department_name)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':department_name', $department_name);
-        
-        // Thực thi câu truy vấn
-        $stmt->execute();
-        echo "Thêm phòng ban thành công";
-    } catch (PDOException $e) {
-        echo $sql . "<br>" . $e->getMessage();
-    }
-}
-
+ 
 ?>
